@@ -103,7 +103,7 @@ const testimonial = [
       rating: 3,
    },
 ];
-// Tampila saat baru masuk page testimonial
+// Tampilan saat baru masuk page testimonial
 const allTestimonial = (container) => {
    let cards = "";
    container.innerHTML = "";

@@ -40,21 +40,21 @@
          <form action="">
             <div>
                <label for="inputProjectName">Project Name</label> <br />
-               <input type="text" id="inputProjectName" />
+               <input type="text" id="inputProjectName" required autofocus />
             </div>
             <div class="date">
                <div class="start">
                   <label for="inputStartDate">Start Date</label><br />
-                  <input type="date" id="inputStartDate" />
+                  <input type="date" id="inputStartDate" required />
                </div>
                <div class="end">
                   <label for="inputEndDate">End Date</label><br />
-                  <input type="date" id="inputEndDate" />
+                  <input type="date" id="inputEndDate" required />
                </div>
             </div>
             <div>
                <label for="inputDescription">Description</label> <br />
-               <textarea id="inputDescription" rows="8"></textarea>
+               <textarea id="inputDescription" rows="8" required></textarea>
             </div>
             <div>
                <h3>Technologies</h3>
@@ -77,7 +77,7 @@
                <h3>Upload Image</h3>
                <div class="upload">
                   <label for="uploadImg">Choose...</label>
-                  <input type="file" id="uploadImg" />
+                  <input type="file" id="uploadImg" required />
                   <i class="fa-solid fa-paperclip"></i>
                </div>
             </div>
