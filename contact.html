@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- CSS Style -->
+      <link rel="stylesheet" href="assets/css/contact.css" />
+      <!-- Fonts Google -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+      <title>Contact | Ainurridho Blog</title>
+   </head>
+   <body>
+      <nav>
+         <div class="brand">
+            <a href="index.html"><img src="assets/images/brand.png" alt="" /></a>
+         </div>
+         <div class="navigation">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="projects.html">Projects</a></li>
+               <li><a href="testimonial.html">Testimonial</a></li>
+            </ul>
+            <div class="contact">
+               <a href="#">Contact</a>
+            </div>
+         </div>
+         <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+      </nav>
+
+      <!-- MAIN CONTENT -->
+      <section>
+         <h1>Contact</h1>
+         <!-- FORM -->
+         <form action="">
+            <div>
+               <label for="inputName">Name</label> <br />
+               <input type="text" id="inputName" autofocus required />
+            </div>
+            <div>
+               <label for="inputEmail">Email</label> <br />
+               <input type="email" id="inputEmail" />
+            </div>
+            <div>
+               <label for="inputPhone">Phone Number</label> <br />
+               <input type="tel" id="inputPhone" required />
+            </div>
+            <div>
+               <label for="inputSubject">Subject</label> <br />
+               <select id="inputSubject" required>
+                  <option selected>Collaboration</option>
+                  <option>Discussion</option>
+                  <option>Hiring</option>
+               </select>
+            </div>
+            <div>
+               <label for="inputMessage">Your Message</label> <br />
+               <textarea id="inputMessage" rows="8" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send</button>
+         </form>
+      </section>
+      <!-- AKHIR MAIN CONTENT -->
+
+      <!-- Script -->
+      <script src="assets/js/hamburger.js"></script>
+      <script src="assets/js/contact.js"></script>
+   </body>
+</html>

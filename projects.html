@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- CSS Style -->
+      <link rel="stylesheet" href="assets/css/projects.css" />
+      <!-- Font Awesome 6 -->
+      <script src="https://kit.fontawesome.com/c92e202055.js" crossorigin="anonymous"></script>
+      <title>Projects | Ainurridho Blog</title>
+   </head>
+   <body>
+      <!-- NAVBAR -->
+      <nav>
+         <div class="brand">
+            <a href="index.html"><img src="assets/images/brand.png" alt="" /></a>
+         </div>
+         <div class="navigation">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="#" class="active">Projects</a></li>
+               <li><a href="testimonial.html">Testimonial</a></li>
+            </ul>
+            <div class="contact">
+               <a href="contact.html">Contact</a>
+            </div>
+         </div>
+         <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+      </nav>
+      <!-- AKHIR NAVBAR -->
+
+      <!-- ADD NEW PROJECT -->
+      <section class="add">
+         <h1>Add New Project</h1>
+         <form action="">
+            <div>
+               <label for="inputProjectName">Project Name</label> <br />
+               <input type="text" id="inputProjectName" />
+            </div>
+            <div class="date">
+               <div class="start">
+                  <label for="inputStartDate">Start Date</label><br />
+                  <input type="date" id="inputStartDate" />
+               </div>
+               <div class="end">
+                  <label for="inputEndDate">End Date</label><br />
+                  <input type="date" id="inputEndDate" />
+               </div>
+            </div>
+            <div>
+               <label for="inputDescription">Description</label> <br />
+               <textarea id="inputDescription" rows="8"></textarea>
+            </div>
+            <div>
+               <h3>Technologies</h3>
+               <div class="skills">
+                  <div>
+                     <input type="checkbox" name="nodejs" id="nodejs" />
+                     <label for="nodejs">Node Js</label> <br />
+                     <input type="checkbox" name="reactjs" id="reactjs" />
+                     <label for="reactjs">React Js</label>
+                  </div>
+                  <div>
+                     <input type="checkbox" name="vuejs" id="vuejs" />
+                     <label for="vuejs">Vue Js</label> <br />
+                     <input type="checkbox" name="laravel" id="laravel" />
+                     <label for="laravel">Laravel</label>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <h3>Upload Image</h3>
+               <div class="upload">
+                  <label for="uploadImg">Choose...</label>
+                  <input type="file" id="uploadImg" />
+                  <i class="fa-solid fa-paperclip"></i>
+               </div>
+            </div>
+            <button type="submit" class="btn-submit">Upload</button>
+         </form>
+      </section>
+      <!-- AKHIR NEW PROJECT -->
+
+      <!-- SHOW PROJECTS -->
+      <section class="show">
+         <h1>My Projects</h1>
+         <div class="container-card">
+            
+         </div>
+      </section>
+      <!-- AKHIR SHOW PROJECTS -->
+
+      <!-- Script -->
+      <script src="assets/js/hamburger.js"></script>
+      <script src="assets/js/projects.js"></script>
+   </body>
+</html>
