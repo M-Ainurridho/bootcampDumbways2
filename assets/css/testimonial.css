@@ -10,7 +10,6 @@ body {
 }
 
 /* NAVBAR */
-/* NAVBAR */
 nav {
    height: 10vh;
    background-color: #eee;
@@ -143,6 +142,10 @@ section h1 {
    margin: 15px 0 -5px;
 }
 
+.card-body .author i {
+   color: gold;
+}
+
 /* Rating */
 .ratings {
    margin: 15px 0 35px;
@@ -152,7 +155,7 @@ section h1 {
 .ratings h3 {
    font-size: 22px;
    margin-bottom: 20px;
-   font-weight: 600;
+   font-weight: 500;
 }
 
 .ratings button {
@@ -192,12 +195,8 @@ section h1 {
 /*  */
 @media screen and (max-width: 768px) {
    /* TESTIMONIAL */
-   .testimonial {
-      flex-direction: column;
-   }
-
    .card {
-      width: 100%;
+      width: 45%;
    }
 }
 
@@ -246,8 +245,18 @@ section h1 {
    .hamburger-menu {
       display: flex;
    }
+
+   /* TESTIMONIAL */
    section h1 {
       text-align: center;
       font-size: 2.1em;
+   }
+
+   .ratings h3 {
+      font-size: 20px;
+   }
+
+   .card {
+      width: 100%;
    }
 }

@@ -86,7 +86,7 @@ const testimonial = [
    },
    {
       author: "Ice Bear",
-      quote: "Situsnya ngelag banget",
+      quote: "Situsnya ngelag banget, mangkanya pake asynchronous",
       image: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
       rating: 1,
    },
@@ -97,14 +97,18 @@ const testimonial = [
       rating: 3,
    },
    {
-      author: "Unknown People",
-      quote: "Bolehlah webnya, lumayan",
+      author: "Anonymous",
+      quote: "HAHAHAHAHA, Aing Hacker",
       image: "https://images.unsplash.com/photo-1534294668821-28a3054f4256?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
       rating: 3,
    },
 ];
+
+const container = document.getElementById("testimonial");
+allTestimonial(container);
+const buttons = document.querySelectorAll(".ratings button");
 // Tampilan saat baru masuk page testimonial
-const allTestimonial = (container) => {
+function allTestimonial(container) {
    let cards = "";
    container.innerHTML = "";
    testimonial.forEach((card) => {
@@ -115,22 +119,25 @@ const allTestimonial = (container) => {
             <div class="card-body">
                <blockquote>"${card.quote}"</blockquote>
                <p class="author">- ${card.author}</p>
-               <p class="author">${card.rating} <i class="fa-solid fa-star"></i></p>
+               <p class="author">${countStars(card.rating)}</p>
             </div>
          </div>
       `;
          container.innerHTML = cards;
       }, 500);
    });
-};
+}
 
-const container = document.getElementById("testimonial");
-allTestimonial(container);
-
-const buttons = document.querySelectorAll(".ratings button");
 // Saat menglik button sesuai rating
 buttons.forEach((btn) => {
    btn.addEventListener("click", function () {
+      buttons[0].style.color = "white";
+      buttons[1].style.color = "white";
+      buttons[2].style.color = "white";
+      buttons[3].style.color = "white";
+      buttons[4].style.color = "white";
+      buttons[5].style.color = "white";
+      btn.style.color = "gold";
       testimonialFilter(btn.textContent);
    });
 });
@@ -141,6 +148,7 @@ const testimonialFilter = (btn) => {
       return allTestimonial(container);
    }
 
+   // Filter berdasarkan rating bintang
    const filter = testimonial.filter((card) => card.rating == btn);
    setTimeout(() => {
       let cards = "";
@@ -155,7 +163,7 @@ const testimonialFilter = (btn) => {
                <div class="card-body">
                   <blockquote>"${card.quote}"</blockquote>
                   <p class="author">- ${card.author}</p>
-                  <p class="author">${card.rating} <i class="fa-solid fa-star"></i></p>
+                  <p class="author">${countStars(card.rating)}</p>
                </div>
             </div>
          `;
@@ -163,4 +171,12 @@ const testimonialFilter = (btn) => {
       }
       container.innerHTML = cards;
    }, 500);
+};
+
+const countStars = (stars) => {
+   let star = "";
+   for (let i = 0; i < stars; i++) {
+      star += `<i class="fa-solid fa-star"></i>`;
+   }
+   return star;
 };
